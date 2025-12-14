@@ -4,6 +4,7 @@ A simple Python tool that compares two images using **[OpenCLIP](https://github.
 ## Installation
 ```bash
 python -m venv venv
+Set-ExecutionPolicy Unrestricted -Scope Process
 venv/Scripts/activate
 pip install -r requirements.txt
 ```
