@@ -4,7 +4,7 @@ import open_clip as openClip
 from PIL import Image
 
 def loadModel(): # function for loading clip models
-    device = "cuda" if torch.cuda.is_available() else "cpu" # sets the device that does the ai shit - if user has a gpu with cuda cores then use those, otherwise do the calcs with cpu
+    device = "cuda" if torch.cuda.is_available() else "cpu" # sets the device that does the ai stuff - if user has a gpu with cuda cores then use those, otherwise do the calcs with cpu
     model, preprocess, _ = openClip.create_model_and_transforms("ViT-B-32", pretrained="laion2b_s34b_b79k") # basically js chooses the model and training data (copied this STRAIGHT from that one repository)
     return device, model, preprocess
 
@@ -15,7 +15,7 @@ def embedImage(imagePath, device, model, preprocess): # takes the image that is 
         embedding = model.encode_image(tensorImage) # finally runs the image through the CLIP model
         embedding = embedding / embedding.norm(dim=-1, keepdim=True) # i saw open clip repo did this in their usage demonstration so i copy
     return embedding
-    # fyi, "In the context of AI, an embedding is a way of representing complex data (like words, images, or audio) as a list of numbers, known as a vector. This numerical format allows computers to "understand" and compare the meaning of different data points." Google AI Overview :D
+    # for your information, "In the context of AI, an embedding is a way of representing complex data (like words, images, or audio) as a list of numbers, known as a vector. This numerical format allows computers to "understand" and compare the meaning of different data points." Google AI Overview :D
 
 def menuStatus():
     shouldMenu: bool
@@ -34,8 +34,8 @@ def main(shouldMenu):
         imagePath2 = sys.argv[2] # set our image path to be the image path in arguments
         process(imagePath1, imagePath2)
     else:
-        imagePath2 = input("Path of reference image? (no quotation marks)")
-        imagePath1 = input("Path of other image? (no quotatiion marks)")
+        imagePath1 = input("Path of first image? (no quotatiion marks)")
+        imagePath2 = input("Path of second image? (no quotation marks)")
         process(imagePath1, imagePath2)
 
 def process(imagePath1, imagePath2):

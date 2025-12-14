@@ -16,3 +16,7 @@ OR
 python compare.py
 ```
 (will ask for image paths to compare)
+
+## Additional Information
+
+Models by default are downloaded in C:\Users\username\.cache\huggingface\hub
