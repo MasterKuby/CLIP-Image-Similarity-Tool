@@ -19,4 +19,4 @@ python compare.py
 
 ## Additional Information
 
-Models by default are downloaded in C:\Users\username\.cache\huggingface\hub
+Models by default are downloaded in C:/Users/username/.cache/huggingface/hub
