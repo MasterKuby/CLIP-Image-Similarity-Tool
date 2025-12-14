@@ -1,5 +1,5 @@
 # CLIP Image Similarity Tool
-A simple Python tool that compares two images using OpenCLIP and outputs a similarity score and percentage.
+A simple Python tool that compares two images using **[OpenCLIP](https://github.com/mlfoundations/open_clip)** and outputs a similarity score and percentage.
 
 ## Installation
 ```bash
