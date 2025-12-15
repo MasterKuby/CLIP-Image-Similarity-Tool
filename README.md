@@ -8,9 +8,22 @@ Set-ExecutionPolicy Unrestricted -Scope Process
 venv/Scripts/activate
 pip install -r requirements.txt
 ```
+## Building a standalone executable
+If you want to use the tool without a Python installation, you can package it into a single executable using PyInstaller.
+
+**With Console/Terminal:**
+```bash
+pip install pyinstaller
+py -m PyInstaller compare.py --onefile --collect-all open_clip --collect-all open_clip_torch-3.2.0.dist-info --collect-all open_clip_train
+```
+**Without Console/Terminal:**
+```bash
+pip install pyinstaller
+py -m PyInstaller compare.py --onefile --collect-all open_clip --collect-all open_clip_torch-3.2.0.dist-info --collect-all open_clip_train --noconsole
+```
 ## Usage
 ```
-python compare.py image.png referenceImage.png
+python compare.py image1.png image2.png
 ```
 OR 
 ```
