@@ -49,6 +49,7 @@ def process(imagePath1, imagePath2):
     print("Device:", device)
     print("Image Similarity:", similarity)
     print("Image Similarity:", str(similarityPercentage) + "%")
+    print(f"FINAL: {similarity}")
     
 
 
