@@ -1,0 +1,18 @@
+i did 
+
+py -m PyInstaller compare.py --onefile --collect-all open_clip --collect-all open_clip_torch-3.2.0.dist-info --collect-all open_clip_train
+
+those are the 3 modules associated with open clip that i saw in Lib folder. When i did:
+
+py -m PyInstaller compare.py --onefile
+
+it showed an error sm about not having the open clip modules, so i just redid with (--collect-all MODULENAME)
+
+thanks https://pyinstaller.org/en/stable/usage.html
+
+by default, terminal will appear when running the exe
+to stop this:
+
+--noconsole
+
+
