@@ -21,6 +21,7 @@ py -m PyInstaller compare.py --onefile --collect-all open_clip --collect-all ope
 pip install pyinstaller
 py -m PyInstaller compare.py --onefile --collect-all open_clip --collect-all open_clip_torch-3.2.0.dist-info --collect-all open_clip_train --noconsole
 ```
+No console executables will crash when opened without the correct arguments.
 ## Usage
 ```
 python compare.py image1.png image2.png
