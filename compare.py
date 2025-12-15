@@ -1,5 +1,6 @@
 import sys
 import torch
+import time
 import open_clip as openClip
 from PIL import Image
 
@@ -50,7 +51,7 @@ def process(imagePath1, imagePath2):
     print("Image Similarity:", similarity)
     print("Image Similarity:", str(similarityPercentage) + "%")
     print(f"FINAL: {similarity}")
-    
+    time.sleep(5) # sleep for 5 seconds so user can see result before terminal auto closes (when run by double clicking compare.py)
 
 
 
