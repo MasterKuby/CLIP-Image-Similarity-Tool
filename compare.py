@@ -34,7 +34,7 @@ def main(shouldMenu):
         imagePath2 = sys.argv[2] 
         process(imagePath1, imagePath2)
     else:
-        imagePath1 = input("Path of first image? (no quotatiion marks)")
+        imagePath1 = input("Path of first image? (no quotation marks)")
         imagePath2 = input("Path of second image? (no quotation marks)")
         process(imagePath1, imagePath2)
 
