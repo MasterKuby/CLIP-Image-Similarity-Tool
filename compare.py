@@ -18,17 +18,17 @@ def embedImage(imagePath, device, model, preprocess):
     return embedding
 
 def menuStatus():
-    shouldMenu: bool
+    usedArgs: bool
     if len(sys.argv) == 3:
-        shouldMenu = False
-        main(shouldMenu)
+        usedArgs = True
+        main(usedArgs)
     else:
-        shouldMenu = True
-        main(shouldMenu)
+        usedArgs = False
+        main(usedArgs)
         
 
-def main(shouldMenu):
-    if shouldMenu == False:
+def main(usedArgs):
+    if usedArgs == True:
         print("Loading CLIP model (first run ever may take a while because downloading the model from huggingface - please chill)...")
         imagePath1 = sys.argv[1] 
         imagePath2 = sys.argv[2] 
@@ -50,7 +50,8 @@ def process(imagePath1, imagePath2):
     print("Image Similarity:", similarity)
     print("Image Similarity:", str(similarityPercentage) + "%")
     print(f"FINAL: {similarity}")
-    time.sleep(5)
+    if usedArgs == False:
+        time.sleep(5)
 
 
 
